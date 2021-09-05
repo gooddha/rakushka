@@ -14,7 +14,7 @@ body {
 
 
 header {
-    height: 100vh;
+    min-height: 100vh;
     background-image:   linear-gradient(170deg, #1c7894b0 0%, #ca710261 40%), 
                         linear-gradient(to bottom, #1c789400 0%, #000000a6 100%),
                         url('images/header-background.jpg');
@@ -50,9 +50,6 @@ header a:hover {
     grid-column: 1 / 5; 
 }
 
-.main-header h2 {
-    /* flex-grow: 1; */
-}
 
 .main-header .phone {
     font-size: 2em;
@@ -269,6 +266,17 @@ footer #map {
     padding-top: 2.5em;
 }
 
+@media screen and (max-width: 1400px) {
+
+    .top .products {
+        grid-row: 4/4;    
+    }
+
+    .top h1, .top .products, .top .description {
+        grid-column: 1/5;
+    }
+}
+
 @media screen and (max-width: 800px) {
     body {
         font-size: calc(0.8em) ;
@@ -277,6 +285,8 @@ footer #map {
     .top h1 {
         grid-column: 1/5;
     }
+
+
 
     .top .towns {
       max-width: 75%;
